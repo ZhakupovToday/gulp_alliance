@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alliance</title>
+
+    <script type="application/ld+json">
+        {"@context":"https://schema.org",
+        "@type":"MovingCompany","@id":"https://www.alliancemoving.com",
+        "url":"https://www.alliancemoving.com/",
+        "name":"Alliance Moving & Storage",
+        "telephone":"(847) 378-4949",
+        "sameAs":["https://www.facebook.com/AllianceMovingTeam/","https://twitter.com/alliance_moving","https://www.instagram.com/alliancemoving/"],
+        "address":{"@type":"PostalAddress","streetAddress":"3201 Tollview Dr, Rolling Meadows","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60008","addressCountry":"US"},
+        "review":[{"@type":"Review","author":{"@type":"Person","name":" Paula Reed"},
+        "reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"My movers were punctual and very speedy with my move . I will definitely recommend them to anyone who needs help with their storage and move!"},
+      }
+    </script>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    @@include('blocks/header.html') @@include('blocks/preview.html')
+    @@include('blocks/services.html') @@include('blocks/connect.html')
+    @@include('blocks/blog.html') @@include('blocks/footer.html')
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

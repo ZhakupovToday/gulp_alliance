@@ -1,0 +1,29 @@
+@import 'mixins';
+@import 'variables';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px 40px;
+    @include WorkSans(400, 12px, 20px, $darkGrey);
+
+    @media screen and (max-width: 321px ) {
+        flex-direction: column;
+        padding: 0 82px 40px 16px;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 44px;
+        padding-right: 295px;
+        padding-left: 145px;
+
+        @media screen and (max-width: 321px ) {
+            padding: 0;
+            flex-direction: column;
+            margin: 8px 0;
+            gap: 8px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin WorkSans($fontW ,$fontS, $lh, $color) {
+    font-family: "Work Sans", sans-serif;
+    font-weight: $fontW;
+    font-size: $fontS;
+    line-height: $lh;
+    color: $color;
+  }

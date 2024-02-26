@@ -1,0 +1,45 @@
+@import 'mixins';
+@import 'variables';
+
+.preview {
+    background: linear-gradient(rgba(55, 46, 46, 0.4), rgba(55, 46, 46, 0.4)), url(../img/main_photo.png) 50% 0% / cover no-repeat;
+    .preview-text {
+        padding: 349px 676px 120px 60px;
+
+        @media screen and (max-width: 376px ) {
+            padding: 198px 12px 40px 17px;
+        }
+        @media screen and (max-width: 321px ) {
+
+        }
+
+        .preview-text__title {
+            @include WorkSans(600, 40px, 46px, #fff);
+            padding-left: 32px;
+            border-left: 2px solid $orange;
+            width: 672px;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 376px ) {
+                @include WorkSans(600, 20px, 23px, #fff);
+                max-width: 273px;
+                padding-left: 8px;
+                margin-bottom: 15px;
+            }
+        }
+        .preview-text__subtitle {
+            @include WorkSans(400, 16px, 26.77px, #fff);
+            margin-left: 32px;
+            width: 526px;
+
+            @media screen and (max-width: 376px ) {
+                @include WorkSans(400, 14px, 20px, #fff);
+                max-width: 283px;
+                
+                margin: 0;
+
+            }
+        }
+    }
+    
+}

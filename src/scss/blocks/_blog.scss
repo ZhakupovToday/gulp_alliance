@@ -1,0 +1,154 @@
+@import 'mixins';
+@import 'variables';
+
+.blog {
+
+    .blog-heading {
+        padding: 80px 60px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 321px ) {
+            padding: 40px 16px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .blog-heading__text {
+            .blog-heading__subtitle {
+                @include WorkSans(600, 12px, 20px, $ligthGrey);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+
+                @media screen and (max-width: 321px ) {
+                    letter-spacing: 2px;
+                }
+            }
+            .blog-heading__title {
+                @include WorkSans(500, 24px, 37.5px, $darkBlue);
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin: 0;
+                @media screen and (max-width: 321px ) {
+                    font-size: 20px;
+                    line-height: 31px;
+                    margin-bottom: 22px;
+                }
+            }      
+        }
+        .blog-heading__button {
+            .blog-heading__button-text {
+                padding: 14px 24px 14px 24px;
+            }
+        }
+    }
+    .blog-grid {
+        padding: 0 60px 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        @media screen and (max-width: 321px ) {
+            display: none;
+        }
+       
+        .blog-grid__item {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                    box-shadow: 1px 1px 12px 0px #4747470F;
+                    .blog-grid__title {
+                        color: $blue;
+                    }
+            }
+
+            .blog-grid__img {
+                display: block;
+            }
+            .blog-grid__subtitle {
+                @include WorkSans(400, 14px, 23px, $darkGrey);
+                padding: 24px 294px 8px 24px;
+            }
+            .blog-grid__title {
+                @include WorkSans(600, 18px, 30px, $darkBlue);
+                padding: 0 160px 16px 24px;
+                margin: 0;
+            }
+            .blog-grid__text {
+                @include WorkSans(400, 16px, 26px, $darkGrey);
+                padding: 0 24px 24px;
+                margin: 0;
+            }
+        }
+    }
+
+    .blog-carousel {
+        position: relative;
+        overflow: hidden;
+        width: 320px;
+        display: none;
+
+        @media screen and (max-width: 321px ) {
+            display: block;
+        }
+
+        .blog-carousel__track {
+            display: flex;
+            width: 320px; 
+            transition: transform 0.3s ease;
+
+            .blog-carousel__slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                
+                flex: 0 0 320px;
+
+                .blog-carousel__img {
+                    width: 288px;
+                    height: 194px;
+                    display: block;
+                    padding: 0 16px;
+                }
+                .blog-carousel__data {
+                    @include WorkSans(400, 14px, 24px, $darkGrey);
+                    margin: 0;
+                    padding: 16px 0 4px 32px;
+                }
+                .blog-carousel__title {
+                    @include WorkSans(600, 16px, 26px, $darkBlue);
+                    margin: 0;
+                    padding: 0 0 16px 32px;
+
+                }
+              }
+          }
+
+
+        .blog-carousel__nav {
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .blog-nav__dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #E0E0E0;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+          }
+          
+          .blog-nav__dot.active {
+            background-color: #F2B91D;
+          }
+            
+          }
+}

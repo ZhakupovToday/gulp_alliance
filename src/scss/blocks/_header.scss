@@ -1,0 +1,197 @@
+@import 'mixins';
+@import 'variables';
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    gap: 126px;
+    background-color: #fff;
+    @include WorkSans(400, 16px, 18px, $darkBlue);
+
+    @media screen and (max-width: 376px ) {
+        padding: 15px 16px;
+    }
+
+    .header__logo {
+        width: 192.22px;
+        height: 50.92px;
+        align-items: center;
+
+        @media screen and (max-width: 376px ) {
+                width: 97px;
+                height: 25px;
+                padding-right: 20px;
+       
+        }
+    }
+    .header-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: 376px ) {
+            display: none;
+        }
+
+        .header-list__item {
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+        
+
+    }
+    .header-connect {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @media screen and (max-width: 376px ) {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            border: 1px solid #E0E0E0;
+            height: 34px;
+            left: -24px;
+            top: 15%;     
+            z-index: 12;
+        }
+
+        .header-connect__phone {
+            width: 16px;
+            height: 16px;   
+        }
+        .header-connect__number {
+            margin-left: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+    
+                &:hover {
+                    color: $blue;
+                }
+            }
+        .header-connect__button {
+            margin-left: 24px;
+            .header-connect__button-text {
+                padding: 16px 20px;
+                width: 95px;
+
+            }
+        }
+        
+    }
+    .header-burger__menu {
+        
+        display: none;
+
+        .header-burger__button {
+            cursor: pointer;
+
+            .burger-menu-icon {
+                width: 30px;
+                max-height: 18px;
+                padding-top: 4px;
+            }
+
+        }
+
+        @media screen and (max-width: 376px ) {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            margin: 0;
+            margin-left: -80px;
+            padding-right: 16px;
+        }
+        @media screen and (max-width: 321px ) {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            margin: 0;
+            margin-left: -146px;
+            padding-right: 10px;
+        }
+
+        .header-burger__phone {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    .header__inner {
+        position: relative;
+        display: none;
+
+        @media screen and (max-width: 321px ) {
+            display: block;
+        }
+        
+
+        .burger {
+            
+            display: none;
+            background-color: #fff;
+            position: absolute;
+            left: -420px;
+            top: 28px;
+            max-height: 400px;
+
+            @media screen and (max-width: 376px ) {
+                width: 375px;
+                left: -512px;
+                top: 27px;
+            }
+            @media screen and (max-width: 321px ) {
+                width: 320px;
+                left: -440px;
+            }
+
+            .burger-list {
+                
+                padding: 36px 220px 0px 16px;
+                margin: 0;
+
+                @media screen and (max-width: 376px ) {
+                    padding: 36px 170px 0px 16px;
+                }
+
+                .burger-list_item {
+
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        .burger-button {
+
+            margin: 100px 90px 140px;
+
+            @media screen and (max-width: 376px ) {
+                margin: 100px 114px 140px;
+            }
+            @media screen and (max-width: 321px ) {
+                margin: 100px 86px 140px;
+            }
+
+            .burger-button__text {
+                padding: 16px 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "./blocks/header";
+@import "./blocks/preview";
+@import "./blocks/services";
+@import "./blocks/connect";
+@import "./blocks/blog";
+@import "./blocks/footer";
+
+@import './blocks/mixins.scss';
+@import './blocks/variables.scss';
+
+body {
+    margin: 0;
+    background-color: #fff;
+    width: 1440px;
+    
+
+    @media screen and (max-width: 376px ) {
+        width: 375px;
+    }
+    @media screen and (max-width: 321px ) {
+        width: 320px;
+    }
+}
+ul {
+    list-style: none;
+}
+input {
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    padding-left: 16px;
+    border-radius: 4px;
+    color: #393939;
+    &::placeholder {
+        @include WorkSans(400, 12px, 14px, #E0E0E0);
+    }         
+}
+label {
+    @include WorkSans(500, 14px, 16px, $darkGrey);
+    margin-bottom: 8px;
+    position: relative;
+}
+hr {
+    border: 1px solid #E0E0E0;
+    width: 1318px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 321px ) {
+        width: 288px;
+    }
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+.label-container {
+    display: flex;
+    gap: 4px;
+    .label-container__star {
+        @include WorkSans(500, 14px, 16px, $orange);
+    }
+}
+.btn-primary {
+    background-color: $blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: #328BA4;
+    }
+    .btn-primary__text {
+        @include WorkSans(400, 16px, 18px, #fff);
+    }
+}
+.btn-secondary {
+    border: none;
+    border-radius: 5px;
+    background-color: $orange;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #ECB51D; 
+    }
+    .btn-secondary__text {
+        @include WorkSans(400, 16px, 18px, #fff);
+    }
+}
+.transparent-button {
+    background-color: #fff;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: $blue;
+        .transparent-button__text { color: #fff;}
+    }
+    .transparent-button__text {
+        @include WorkSans(400, 16px, 18px, $blue);
+        transition: 0.3s;
+    }
+}

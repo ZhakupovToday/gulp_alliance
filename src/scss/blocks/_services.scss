@@ -1,0 +1,183 @@
+@import 'mixins';
+
+.services {
+    padding: 60px 100px;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: 376px ) {
+        padding: 0;
+        
+    }
+
+    .services-preview {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       
+
+        .services-preview__info {
+            @include WorkSans(600, 12px, 20px, $ligthGrey);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+
+            @media screen and (max-width: 376px ) {
+                padding: 0 115px;
+                margin-top: 40px;
+            }
+        }
+        .services-preview__title {
+            @include WorkSans(500, 32px, 53px, $darkBlue);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+
+            @media screen and (max-width: 376px ) {
+                @include WorkSans(500, 20px, 26px, $darkBlue);
+                padding: 0 25px;
+            }
+            @media screen and (max-width: 321px ) {
+                width: 271px;
+                
+            }
+        }
+        .services-preview__subtitle {
+            @include WorkSans(400, 16px, 26px, $darkGrey);
+            margin-top: 16px;
+            max-width: 442px;
+            padding: 0 390px;
+            height: 54px;
+
+            @media screen and (max-width: 376px ) {
+                @include WorkSans(400, 14px, 21px, $darkGrey);
+                
+                padding: 0 24px;
+                
+            }
+            
+        }
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        @media screen and (max-width: 376px ) {
+            display: none;
+        }
+
+        .services-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 1px 1px 12px 0px #4747470F;
+                .services-card__title {
+                    color: $blue;
+                    
+                }
+            }
+
+            &:nth-child(2) {
+                .services-card__text {        
+                    max-width: 321px;
+                }
+            }
+            .services-card__img {
+                width: 88px;
+                height: 88px;
+                padding-top: 56px;
+
+                
+            }
+            .services-card__title {
+                @include WorkSans(600, 18px, 30px, $darkBlue);
+                letter-spacing: -1px;
+                margin-top: 24px; 
+                margin-bottom: 0;
+            }
+            .services-card__text {
+                @include WorkSans(400, 16px, 27px, $darkGrey);
+                letter-spacing: 0em;
+                text-align: center;
+                max-width: 280px;
+                
+            }
+        }
+    }
+
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 320px;
+        margin-top: 32px;
+        display: none;
+
+        @media screen and (max-width: 321px ) {
+            display: block;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 320px; 
+            transition: transform 0.3s ease;
+
+            .carousel-track__slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 320px;
+
+                .carousel-track__img {
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    padding: 32px 115px 0 125px;
+                }
+                .carousel-track__title {
+                    @include WorkSans(600, 16px, 26px, $darkBlue);
+                    letter-spacing: -0.5px;
+                    margin: 0;
+                    padding: 16px 71px 16px 71px;
+                }
+                .carousel-track__text {
+                    @include WorkSans(400, 14px, 21.74px, $darkGrey);
+                    margin: 0;
+                    padding: 0 23px 32px 23px;
+                    text-align: center;
+                    max-width: 242px;
+                }
+              }
+          }
+
+
+        .carousel-nav {
+            text-align: center;
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .nav-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #E0E0E0;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+          }
+          
+          .nav-dot.active {
+            background-color: #F2B91D;
+          }
+            
+          }
+      }
+      
+
